@@ -55,7 +55,7 @@ public class registerServlet extends HttpServlet {
 			i =  dao.userRegister(use);
 			if(i>0)
 			{
-				session.setAttribute("user", "use");
+				session.setAttribute("user", use);
 				response.getWriter().println("<script>alert('Resgister successfully'); location='register.jsp';</script>");
 				response.sendRedirect("index.jsp");
 				
